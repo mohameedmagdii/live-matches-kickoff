@@ -14,6 +14,7 @@ class Fotmob(object):
     def request_send(self):
         headers = {
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+            "X-Mas": "eyJib2R5Ijp7InVybCI6Ii9hcGkvZGF0YS9tYXRjaERldGFpbHM/bWF0Y2hJZD00ODQ0MzU0IiwiY29kZSI6MTc3MTMyODA4OTY4NywiZm9vIjoicHJvZHVjdGlvbjo3ZGU0Y2FlMjg1YTMwYjhmYmQ3ZGZmNjdlNDFjYTc4YTcxNTU0YWIzIn0sInNpZ25hdHVyZSI6Ijg4NjM5NUY5QkI3NUM0MkNGOTk2MDY5RTQ2MTMzNDE4In0="
         }
         response = requests.get(self.match_events_api + str(self.match_id), headers=headers)
         response.raise_for_status()
@@ -184,4 +185,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
