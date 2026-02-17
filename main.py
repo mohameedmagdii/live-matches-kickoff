@@ -8,7 +8,7 @@ import requests
 
 class Fotmob(object):
     def __init__(self, match_id):
-        self.match_events_api = 'https://www.fotmob.com/api/matchDetails?matchId='
+        self.match_events_api = 'https://www.fotmob.com/api/data/matchDetails?matchId='
         self.match_id = match_id
 
     def request_send(self):
@@ -184,3 +184,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
